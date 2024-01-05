@@ -1,18 +1,27 @@
 ---
 import  FormationPreview  from '../Formations/FormationPreview.astro'
+const formations = await Astro.glob('../../pages/Catalogue/*.md')
 ---
 
 <section class="section-formation">
   <h2>Des programmes adaptés à la mise en place d'actions concrètes</h2>
-  <FormationPreview />
+  <div class="formations-container">   
+    {formations.map((formation) => {
+      return <FormationPreview formation={formation.frontmatter} />
+    })}
+  </div>
 </section>
 
 <style>
   .section-formation {
     background-color: #FFFCEF;
-    padding: 2.5rem 0;
   }
   .section-formation h2 {
     text-align: center;
+  }
+  .formations-container {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 30px;
   }
 </style>

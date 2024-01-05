@@ -2,29 +2,29 @@
 import Layout from '../layouts/Layout.astro';
 import Reference from '../components/Sections/Reference.astro';
 import CataloguePreview from '../components/Sections/CataloguePreview.astro';
+import About from '../components/Sections/About.astro';
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Spines Formation">
 	<main>
-		<div class="header-content">
+		<section class="header-content">
 			<h1>Formez vous aux outils numériques essentiels à la croissance de votre entreprise</h1>
 			<a href="/" class="cta-primary">Trouver une formation</a>
-		</div>
+		</section>
 		<Reference />
 		<CataloguePreview />
+		<About />
 	</main>
 </Layout>
 
 <style>
-	main {
-		padding: 1.2rem;
-	}
 	.header-content {
 		background-image: url('/img/formation-seo-entreprises.png');
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: left;
 		padding: 11.7rem 1.7rem 1.9rem 1.7rem;
+		margin: 0 1.2rem;
 		border-radius: 20px;
 		color: #fff;
 	}

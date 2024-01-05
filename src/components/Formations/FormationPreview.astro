@@ -1,14 +1,18 @@
+---
+const { formation } = Astro.props
+---
+
 <div class="formation-preview">
   <div class="formation-preview_img">
-    <img src="/img/formation-retro.jpg" width="600px" alt="formation preview">
+    <img src={formation.thumbnail} width="600px" alt="formation preview">
   </div>
   <div class="formation-preview_content">
-    <h2>Gagnez en visibilité avec le référencement naturel</h2>
+    <h2>{formation.title}</h2>
     <div class="formation-preview_meta">
-      <p class="formation-duration">21 heures</p>
-      <p>Niveau 1</p>
+      <p class="formation-duration">{formation.duration}</p>
+      <p>{formation.level}</p>
     </div>
-    <p><span class="formation-price">2 100 euros HT</span></p>
+    <p><span class="formation-price">{formation.price}</span></p>
     </div>
 </div>
 

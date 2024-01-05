@@ -1,8 +1,8 @@
 ---
-title: Gagnez en visibilité avec le référencement naturel
+title: Suivez vos résultats avec Google Analytics 4
 description: Ceci est la description de la formation sur le référencement naturel.
-duration: 21 heures
+duration: 7 heures
 level: Niveau 1
-price: 2 100 euros HT
+price: 750 euros HT
 thumbnail: /img/formation-retro.jpg
 ---
