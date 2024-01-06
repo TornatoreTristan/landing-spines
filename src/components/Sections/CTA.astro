@@ -1,0 +1,19 @@
+---
+const { title, resume, ctalink, ctatxt } = Astro.props
+---
+
+<section>
+<div>
+    <h2>{title}</h2>
+    <p>{resume}</p>
+  </div>
+  <div>
+    <a href={ctalink} class="cta-primary">{ctatxt}</a>
+  </div>
+</section>
+
+<style>
+  section {
+    text-align: center;
+  }
+</style>

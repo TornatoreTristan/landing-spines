@@ -3,17 +3,28 @@ import Layout from '../layouts/Layout.astro';
 import Reference from '../components/Sections/Reference.astro';
 import CataloguePreview from '../components/Sections/CataloguePreview.astro';
 import About from '../components/Sections/About.astro';
+import Testimonials from '../components/Sections/Testimonials.astro';
+import CTA from '../components/Sections/CTA.astro';
+import Financement from '../components/Sections/Financement.astro';
 ---
 
 <Layout title="Spines Formation">
 	<main>
 		<section class="header-content">
+			<p><span>Prise en charge à 100% possible</span></p>
 			<h1>Formez vous aux outils numériques essentiels à la croissance de votre entreprise</h1>
 			<a href="/" class="cta-primary">Trouver une formation</a>
 		</section>
 		<Reference />
 		<CataloguePreview />
 		<About />
+		<Testimonials />
+		<CTA 
+			title="Creez le programme de formation idéal pour votre projet" 
+			resume="Discutons ensemble de votre projet et de vos besoins pour adpater le programme de formation le plus adapté à votre entreprise." 
+			ctatxt="Prendre rendez-vous avec un conseiller" 
+			ctalink="/" />
+		<Financement />
 	</main>
 </Layout>
 
@@ -30,5 +41,16 @@ import About from '../components/Sections/About.astro';
 	}
 	.header-content h1 {
 		margin-bottom: 2rem;
+		margin-top: 0;
+		font-size: 2rem;
+	}
+	span {
+		font-size: 0.7rem;
+		font-weight: 700;
+		background-color: #fff;
+		border-radius: 20px;
+		margin: 0px 0px;
+		padding: 0.5rem 1rem;
+		color: black;
 	}
 </style>

@@ -1,17 +1,17 @@
 <footer>
-  <section>
+  <section class="footer-section">
     <div class="copyright">
       <img src="/icone-spines.svg" width="80" alt="icone spines">
       <p>© 2024 - Spines Formation</p>
     </div>
-    <div>
+    <div class="footer-col">
       <h3>Spines</h3>
       <ul>
         <li><a href="#">Légal</a></li>
         <li><a href="#">Confidentialité</a></li>
       </ul>
     </div>
-    <div>
+    <div class="footer-col">
       <h3>Informations</h3>
       <ul>
         <li><a href="#">Ressources</a></li>
@@ -22,7 +22,33 @@
 </footer>
 
 <style>
+  .footer-section {
+    display: flex;
+    flex-direction: column-reverse;
+  }
   .copyright {
     text-align: center;
+  }
+  .copyright p {
+    font-size: 0.6rem;
+    color: #332E47;
+  }
+  footer h3 {
+    font-size: 1rem;
+  }
+  .footer-col ul {
+    list-style: none;
+    padding: 0;
+  }
+  .footer-col {
+    text-align: center;
+  }
+  .footer-col li {
+    margin: 10px 0;
+    font-size: 0.8rem;
+  }
+  .footer-col li a {
+    color: #332E47;
+    text-decoration: none;
   }
 </style>

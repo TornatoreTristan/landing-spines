@@ -1,0 +1,73 @@
+---
+const testimonials = await Astro.glob('../../content/testimonials/*.md');
+---
+<section class="section-testimonials">
+  <div class="testimonials-title">
+    <h2>Ils se sont formés chez Spines Formation</h2>
+    <p>Pour parfaire leur utilisation des outils numériques, ils ont optés pour Spines Formation.</p>
+  </div>
+  <div class="testimonials-container">
+    {testimonials.map((testimonial) => {
+      return (
+        <div class="testimonial">
+          <div>
+            <div class="testimonial-meta">
+              <img src={testimonial.frontmatter.picture} width="60" height="60" alt={testimonial.frontmatter.companie}>
+              <div>              
+                <p>{testimonial.frontmatter.person}</p>
+                <p><span>{testimonial.frontmatter.companie}</span></p>
+              </div>
+            </div>
+            <p class="testimonial-content">{testimonial.frontmatter.content}</p>
+          </div>
+        </div>
+      )
+    })}
+  </div>
+</section>
+
+<style>
+  .section-testimonials {
+    background-color: #423D5E;
+    color: #fff
+  }
+  .testimonials-title {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .testimonials-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  .testimonial{
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 20px;
+    color: #38344C;
+  }
+  .testimonial img {
+    border-radius: 50%;
+  }
+  .testimonial-meta {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+  .testimonial-meta p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.3rem;
+  }
+  .testimonial-meta span {
+    font-size: 0.8rem;
+    line-height: 0.5rem;
+    color: #423D5E;
+  }
+  .testimonial-content {
+    font-size: 1rem;
+    line-height: 1.6rem;
+    margin-top: 20px;
+  }
+
+</style>
