@@ -1,8 +1,10 @@
 <section class="about-resume">
   <div class="resume-header">
-      <h2>Placer l'action au coeur de nos formations pour vous permettre d'optimiser vos actions immédiatement.</h2>
-      <div class="resume-header_img">
-        <img src="./img/formation-spines-seo.jpeg" width="650" alt="formation-spines-seo.jpg">
+      <div class="resume-header_head">
+        <h2>Placer l'action au coeur de nos formations pour vous permettre d'optimiser vos ventes immédiatement.</h2>
+        <div class="resume-header_img">
+          <img src="./img/formation-spines-seo.jpeg" width="650" alt="formation-spines-seo.jpg">
+        </div>
       </div>
       <p>En tant que gérant de votre projet ou votre entreprise, passer a coté des outils digitaux est le risque de passer a coté d'opportunités essentielles. Pour autant, votre temps est limité et reprendre toutes les bases du marketing digital pour mettre en pratique que 20% de votre apprentissage serait superflu. 
       </p>
@@ -49,5 +51,35 @@
     background-color: #fff;
     box-shadow: 0 0 30px rgba(0, 0, 0, .05);
     border-radius: 20px;
+  }
+  @media screen and (min-width: 768px) {
+    .resume-header_head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 50px;
+    }
+    .resume-header_head {
+      margin: 6em 0px;
+      position: relative;
+    }
+    .resume-header_head h2 {
+      font-size: 3.5rem;
+      line-height: 4.4rem;
+      max-width: 700px;
+    }
+    .resume-box_container {
+      flex-direction: row;
+    }
+    .resume-header p {
+      font-size: 1.6rem;
+      line-height: 3rem;
+      max-width: 800px;
+      margin: 20px auto;
+    }
+    .resume-header {
+      margin-bottom: 100px;
+    }
+    
   }
 </style>

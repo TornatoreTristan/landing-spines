@@ -8,21 +8,22 @@ const testimonials = await Astro.glob('../../content/testimonials/*.md');
   </div>
   <div class="testimonials-container">
     {testimonials.map((testimonial) => {
-      return (
-        <div class="testimonial">
-          <div>
-            <div class="testimonial-meta">
-              <img src={testimonial.frontmatter.picture} width="60" height="60" alt={testimonial.frontmatter.companie}>
-              <div>              
-                <p>{testimonial.frontmatter.person}</p>
-                <p><span>{testimonial.frontmatter.companie}</span></p>
+        return (
+          <div class="testimonial">
+            <div>
+              <div class="testimonial-meta">
+                <img src={testimonial.frontmatter.picture} width="60" height="60" alt={testimonial.frontmatter.companie}>
+                <div>              
+                  <p>{testimonial.frontmatter.person}</p>
+                  <p><span>{testimonial.frontmatter.companie}</span></p>
+                </div>
               </div>
+              <p class="testimonial-content">{testimonial.frontmatter.content}</p>
             </div>
-            <p class="testimonial-content">{testimonial.frontmatter.content}</p>
           </div>
-        </div>
-      )
-    })}
+        )
+      })
+    }
   </div>
 </section>
 
@@ -69,5 +70,12 @@ const testimonials = await Astro.glob('../../content/testimonials/*.md');
     line-height: 1.6rem;
     margin-top: 20px;
   }
-
+  @media screen and (min-width: 768px) {
+    .testimonials-container {
+      flex-direction: row;
+      flex-wrap: nowrap;
+    }
+    .testimonial {
+      width: 100%;}
+    }
 </style>

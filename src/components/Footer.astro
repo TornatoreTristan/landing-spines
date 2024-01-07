@@ -4,25 +4,27 @@
       <img src="/icone-spines.svg" width="80" alt="icone spines">
       <p>© 2024 - Spines Formation</p>
     </div>
-    <div class="footer-col">
-      <h3>Spines</h3>
-      <ul>
-        <li><a href="#">Légal</a></li>
-        <li><a href="#">Confidentialité</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h3>Informations</h3>
-      <ul>
-        <li><a href="#">Ressources</a></li>
-        <li><a href="#">Catalogue</a></li>
-      </ul>
+    <div class="footer-col_container"> 
+      <div class="footer-col">
+        <h3>Spines</h3>
+        <ul>
+          <li><a href="#">Légal</a></li>
+          <li><a href="#">Confidentialité</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Informations</h3>
+        <ul>
+          <li><a href="#">Ressources</a></li>
+          <li><a href="#">Catalogue</a></li>
+        </ul>
+      </div>
     </div>
   </section>
 </footer>
 
 <style>
-  .footer-section {
+  .footer-section, .footer-col_container {
     display: flex;
     flex-direction: column-reverse;
   }
@@ -50,5 +52,17 @@
   .footer-col li a {
     color: #332E47;
     text-decoration: none;
+  }
+  @media screen and (min-width: 768px) {
+    .footer-section, .footer-col_container {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    .footer-col_container {
+      gap: 80px;
+    }
+    .footer-col {
+      text-align: left;
+    }
   }
 </style>
